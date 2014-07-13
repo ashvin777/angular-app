@@ -1,0 +1,57 @@
+<div ng-controller="PLAnalysisController" class="ui-container ui-height-inherit">
+    <div class="ui-options-container">
+        <div class="col-xs-5 options-padding">
+            <select class="btn-block">
+                <option>All Client</option>
+                <option>Client 1</option>
+                <option>Client 2</option>
+            </select>
+        </div>
+        <div class="col-xs-5 options-padding">
+            <select class="btn-block">
+                <option>1 Janurary,2013 - 31 December, 2013</option>
+                <option>1 Janurary,2012 - 31 December, 2012</option>
+                <option>1 Janurary,2011 - 31 December, 2011</option>
+            </select>
+        </div>
+        <div class="col-xs-2 options-padding options-switch">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default btn-scater">
+                    <input type="radio" name="options" >&nbsp;
+                </label>
+                <label class="btn btn-default btn-bar active">
+                    <input type="radio" name="options" >&nbsp;
+                </label>
+                
+            </div>
+        </div>
+    </div>
+    <div class="ui-upper-container ui-chart-container ui-chart-pl">
+        <div class="ui-left-bar pull-left">
+            Profit / Loss (in %)
+        </div>
+        <div class="ui-right-container pull-left">
+            <div class="ui-bar"></div>
+            <div class="ui-chart-inner">
+                <cjs-line dataset="lineData" autofit="true" options="options"></cjs-line>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="ui-bottom-container ui-chart-container ui-chart-pr">
+        
+         <div class="ui-left-bar pull-left">
+        Revenue Vs. Profit / Loss
+        </div>
+        <div class="ui-right-container pull-left">
+            <div class="ui-bar"></div>
+            <div class="ui-chart-inner">
+                <cjs-bar dataset="barData" autofit="true" options="options"></cjs-bar>
+            </div>
+        </div>
+        
+        
+    </div>
+
+</div>
